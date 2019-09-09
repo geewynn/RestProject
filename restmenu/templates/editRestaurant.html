@@ -1,0 +1,7 @@
+<h4>Edit Note</h4>
+			<form method='POST'>
+				{% csrf_token %}
+				{{ form.as_p }}
+                <button type="submit" class="btn btn-sm btn-primary">Update</button>
+
+			</form>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Home </title>
+</head>
+
+    <table class="table table-bordered">
+    <thead class="alert-warning">
+        <tr>
+        	<p>Restaurants</p>
+        </tr>
+    </thead>
+	    <tbody>
+	        {% for rest in all_rest %}
+	        <tr>
+	        	<td>{{ rest.restaurant_name }}</td>
+
+	            <td><center>
+                    <button type="button" class="btn btn-success"><a href="edit/{{ rest.id }}"><span></span>Edit</a></button>
+                    <button type="button" class="btn btn-success"><a href="menu/{{ rest.id }}"><span></span>See Menu</a></button>
+                    <button type="button" class="btn btn-success"><a href="addmenu/{{ rest.id }}/"><span></span>Add Menu</a></button>
+                    <button type="button" class="btn btn-danger"><a href="{{ rest.id }}/delete"><span></span>Delete</a></button></center></td>
+	        </tr>
+	        {% endfor %}
+	    </tbody>
+</table>
+     <button type="button" class="btn btn-success"><a href="{% url 'add' %}"><span></span>Add Restaurant</a></button>
+
+    </div>
+
+
+    </div>
+    </body>
+
+</html>

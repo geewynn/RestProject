@@ -1,0 +1,7 @@
+<h4>Edit Menu</h4>
+			<form method='POST'>
+				{% csrf_token %}
+				{{ form.as_p }}
+                <button type="submit">Update</button>
+
+			</form>

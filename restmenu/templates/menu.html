@@ -1,0 +1,18 @@
+
+{% for menu in all_menu %}
+
+<h3>{{ menu.name }}</h3>
+
+<p>{{ menu.description }}</p>
+    <ul>
+    <b>Price:</b>
+<li>{{ menu.price }}</li>
+    <b>Course</b>
+<li>{{ menu.course }}</li>
+    </ul>
+  <button type="button" class="btn btn-danger"><a href="{{ menu.id }}/delete"><span></span>Delete</a></button></center></td>
+  <button type="button" class="btn btn-danger"><a href="edit/{{ menu.id }}"><span></span>Edit</a></button></center></td>
+
+{% endfor %}
+
+<button><a href=""></a>Home</button>
